@@ -16,6 +16,8 @@ def main():
 
         elif choice == "P":
             print(f" your score {score} is {determine_status(score)}")
+        elif choice == "S":
+            print_stars(score)
         else:
             print("invalid choice , try again")
         print("menu :")
@@ -24,15 +26,13 @@ def main():
 
 
 def get_score():
-    """Get a numeric score and display its status."""
-    score = float(input("Enter score: "))
+    """Get a numeric score ."""
+    score = int(input("Enter score: "))
     while score < 0 or score > 100:
         print( "Invalid score")
-        score = float(input("Enter score: "))
+        score = int(input("Enter score: "))
 
     return score
-
-
 
 
 def determine_status(score):
@@ -45,7 +45,10 @@ def determine_status(score):
     else:
         return "Bad"
 
-
-
+def print_stars(score):
+    """Print the stars based on the number of scores."""
+    for i in range(score):
+        print ('*', end="")
+    print()
 
 main()
