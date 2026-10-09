@@ -7,11 +7,11 @@ def main():
     (P)rint result (copy or import your function to determine the result from score.py)
     (S)how stars (this should print as many stars as the score)
     (Q)uit)"""
-
+    score = ""
     print("menu: ")
     choice = input(">").upper()
-    while choice != "Q" :
-        if choice == "G" :
+    while choice != "Q":
+        if choice == "G":
             score = get_score()
 
         elif choice == "P":
@@ -29,7 +29,7 @@ def get_score():
     """Get a numeric score ."""
     score = int(input("Enter score: "))
     while score < 0 or score > 100:
-        print( "Invalid score")
+        print("Invalid score")
         score = int(input("Enter score: "))
 
     return score
@@ -48,7 +48,7 @@ def determine_status(score):
 def print_stars(score):
     """Print the stars based on the number of scores."""
     for i in range(score):
-        print ('*', end="")
+        print('*', end="")
     print()
 
 main()
