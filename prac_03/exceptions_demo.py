@@ -16,3 +16,10 @@ except ValueError:
 except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
+
+
+"""answers:
+1.when the numerator and denominator isnt a valid intergers , such as "hello" or "3.5"
+2.when the denominator is divided by zero 
+3. yes , code can check if the denominator is zero before divison .
+"""
