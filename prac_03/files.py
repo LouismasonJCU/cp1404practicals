@@ -5,7 +5,7 @@ print(user_name , file=out_file)
 out_file.close()
 
 #2
-in_file = open("data.txt","w")
-name = input("enter your name:")
+in_file = open("name.txt","w")
+name = in_file.read().strip()
 print(f"hi {name}")
 in_file.close()
