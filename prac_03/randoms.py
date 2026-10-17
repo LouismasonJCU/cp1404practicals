@@ -25,3 +25,7 @@ print(random.uniform(2.5,5.5))
 """What did you see on line 3?"""
 # a random float variable between 2.5 and 5.5
 """What was the smallest number you could have seen, what was the largest?"""
+# smallest number : 2.5
+# largest number : 5.59999999
+
+
