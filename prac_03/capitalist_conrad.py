@@ -40,4 +40,4 @@ while MIN_PRICE <= price <= MAX_PRICE:
     price *= (1 + price_change)
     print(f"on day {day} price is :${price:,.2f}")
 
-out_file(close())
+out_file.close()
