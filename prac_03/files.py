@@ -11,6 +11,7 @@
 # print(f"hi {name}!")
 
 #3
-with open("numbers.txt","r") as file:
-    numbers = file.read().strip("400")
-print(numbers)
+with open("numbers.txt","r") as in_file:
+    number1=int(in_file.readline())
+    number2=int(in_file.readline())
+print(number)
