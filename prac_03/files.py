@@ -14,4 +14,4 @@
 with open("numbers.txt","r") as in_file:
     number1=int(in_file.readline())
     number2=int(in_file.readline())
-print(number)
+print(number1 + number2)
