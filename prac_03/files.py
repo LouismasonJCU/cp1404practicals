@@ -11,7 +11,17 @@
 # print(f"hi {name}!")
 
 #3
+# with open("numbers.txt","r") as in_file:
+#     number1=int(in_file.readline())
+#     number2=int(in_file.readline())
+# print(number1 + number2)
+
+#4
+total =0
 with open("numbers.txt","r") as in_file:
-    number1=int(in_file.readline())
-    number2=int(in_file.readline())
-print(number1 + number2)
+    for line in in_file:
+        total += int(line)
+        print(total)
+in_file.close()
+        
+
