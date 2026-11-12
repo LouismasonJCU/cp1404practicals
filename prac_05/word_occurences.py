@@ -1,4 +1,5 @@
 """estimate of doing this question : 1 hour
+   actual time : 50 minutes
 """
 word_to_count = {}
 text = "this is a collection of words of nice words this is a fun thing it is"
