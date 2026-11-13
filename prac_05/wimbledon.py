@@ -5,6 +5,9 @@ actual time :
 from fileinput import filename
 
 FILENAME = "wimbledon.csv"
+INDEX_COUNTRY = 1
+INDEX_CHAMPION = 2
+
 
 def main():
     records = load_records(FILENAME)
@@ -19,5 +22,20 @@ def load_records(filename):
             parts = line.strip().split(",")
             records.append(parts)
     return records
+
+def process_records(records):
+    """process records from list form"""
+    champion_to_count ={}
+    countries = set()
+    for record in records :
+        champion_to_count.add(record[INDEX_COUNTRY])
+        try:
+            champion_to_count[record[INDEX_CHAMPION]] += 1
+        except KeyError:
+            champion_to_count[record[INDEX_CHAMPION]] = 1
+    return champion_to_count, countries
+
+
+
 
 main()
