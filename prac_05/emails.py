@@ -1,6 +1,6 @@
 """
 estimated the amount of time for this question : 50 minutes
-actual time :
+actual time : 1 hour
 
 """
 def main():
