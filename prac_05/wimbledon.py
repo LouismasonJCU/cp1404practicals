@@ -36,13 +36,6 @@ def process_records(records):
             champion_to_count[record[INDEX_CHAMPION]] = 1
     return champion_to_count, countries
 
-def display_results(champion_to_count, countries):
-    """display results"""
-    print("Wimbledon Champions: ")
-    for champion, count in champion_to_count.items():
-        print(champion , count)
-    print()
-
 
 
 
