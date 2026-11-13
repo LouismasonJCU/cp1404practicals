@@ -11,7 +11,8 @@ INDEX_CHAMPION = 2
 
 def main():
     records = load_records(FILENAME)
-    print(records)
+    champion_to_count, countries = process_records(records)
+
 
 def load_records(filename):
     """load records from list form"""
@@ -34,6 +35,13 @@ def process_records(records):
         except KeyError:
             champion_to_count[record[INDEX_CHAMPION]] = 1
     return champion_to_count, countries
+
+def display_results(champion_to_count, countries):
+    """display results"""
+    print("Wimbledon Champions: ")
+    for champion, count in champion_in_count.items():
+        print(champion , count)
+    print()
 
 
 
