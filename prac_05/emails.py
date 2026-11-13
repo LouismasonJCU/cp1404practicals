@@ -16,5 +16,6 @@ email = "john.smith@gmail.com"
 prefix = email.split('@')[0]
 # print(prefix)
 parts = prefix.split('.')
-print(parts)
+name = " ".join(parts).title()
+print(name)
 
