@@ -1,6 +1,6 @@
 """
 estimated time to create this question : 1 hour 30 minutes
-actual time :
+actual time : 2 hours 15 minutes
 """
 from fileinput import filename
 
@@ -11,7 +11,8 @@ INDEX_CHAMPION = 2
 
 def main():
     records = load_records(FILENAME)
-    print(records)
+    champion_to_count, countries = process_records(records)
+    display_results(champion_to_count, countries)
 
 def load_records(filename):
     """load records from list form"""
@@ -28,7 +29,7 @@ def process_records(records):
     champion_to_count ={}
     countries = set()
     for record in records :
-        champion_to_count.add(record[INDEX_COUNTRY])
+        countries.add(record[INDEX_COUNTRY])
         try:
             champion_to_count[record[INDEX_CHAMPION]] += 1
         except KeyError:
@@ -41,6 +42,8 @@ def display_results(champion_to_count, countries):
     for champion, count in champion_to_count.items():
         print(champion, count)
     print()
+    print(f"these {len(countries)} countries have won wimbledon :")
+    print(','.join(sorted(countries)))
 
 
 main()
