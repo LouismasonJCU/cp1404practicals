@@ -15,10 +15,10 @@ class Guitar:
     def __str__(self):
         return f"{self.name} ({self.year}) : {self.cost}"
 
-    def get_age(self,year):
+    def get_age(self):
         return datetime.datetime.now().year - self.year
 
-    def is_vintage(self, year):
-        return self.get_age(year) > 50
+    def is_vintage(self):
+        return self.get_age() > 50
 
 
